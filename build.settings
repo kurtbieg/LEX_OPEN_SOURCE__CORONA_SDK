@@ -1,0 +1,35 @@
+-- Supported values for orientation:
+-- portrait, portraitUpsideDown, landscapeLeft, landscapeRight
+
+settings = {
+	
+	orientation =
+	    {
+	        default = "landscapeRight",
+	        supported = { "landscapeLeft", "landscapeRight" },
+	    },
+	
+	iphone = {
+		plist = {
+			UIStatusBarHidden = true,
+			UIPrerenderedIcon = true,
+			UIApplicationExitsOnSuspend = false,
+             CFBundleIconFile = "Icon.png",
+             CFBundleIconFiles = {
+				"Icon.png" , 
+				"Icon@2x.png" , 
+				"Icon-72.png" , 
+				"Icon-Small.png",
+				"Icon-Small-50.png",
+				"iTunesArtwork.png",
+				"Icon-60.png",
+				"Icon-60@2x",
+				"Icon-76",
+				"Icon-76@2x",
+             },
+			UIApplicationExitsOnSuspend = false,	-- must be false for single sign-on to work
+
+		},
+		components = {},
+	}
+}
